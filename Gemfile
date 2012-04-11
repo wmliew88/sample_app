@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.3' # rails version
 gem 'jquery-rails', '2.0.0'
+gem 'bootstrap-sass', '2.0.0' # css gem sass pipeline
 
 group :development do
-  gem 'sqlite3', '1.3.5'
+  gem 'sqlite3', '1.3.5' #database sqlite not using in future
   gem 'rspec-rails', '2.9.0'
-  gem 'guard-rspec', '0.5.5'
+  gem 'guard-rspec', '0.5.5' #rspec gem for testing gem
 end
 
 # Gems used only for assets and not required
@@ -20,17 +21,17 @@ end
 # Test gems on Windows
 group :test do
   gem 'rspec-rails', '2.9.0'
-  gem 'capybara', '1.1.2'
+  gem 'capybara', '1.1.2' # page gem
   gem 'rb-fchange', '0.0.5'
   gem 'rb-notifu', '0.0.4'
-  gem 'win32console', '1.3.0'
-  gem 'guard-spork', '0.3.2'
-  gem 'spork', '0.9.0'
+  gem 'win32console', '1.3.0' #console for windows gem
+  gem 'guard-spork', '0.3.2' #guard & spork testing gem
+  gem 'spork', '0.9.0' #spork testing gem
 end 
 
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg', '0.12.2' #postgres gem
 end
 
 

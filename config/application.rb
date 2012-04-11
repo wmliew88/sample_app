@@ -5,7 +5,7 @@ require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
-require "sprockets/railtie"
+require "sprockets/railtie" #uses sprockets for assest pipeline
 # require "rails/test_unit/railtie"
 
 if defined?(Bundler)
@@ -61,5 +61,10 @@ module SampleApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_controller.perform_caching = true
+
+    config.cache_store = :memory_store #set up application’s default cache store
+
   end
 end
